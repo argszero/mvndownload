@@ -1,6 +1,7 @@
-<project name="Hadoop" default="compile"
-         xmlns:artifact="urn:maven-artifact-ant"
-         xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="test"  xmlns:ivy="antlib:org.apache.ivy.ant">
+  <target name="ivy-init" depends="ivy-init-antlib">
+    <ivy:configure settingsid="ivy.xml" file="ivysettings.xml"/>
+  </target>
   <target name="tt">
     <echo message="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
     <echo message="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
