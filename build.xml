@@ -1,12 +1,12 @@
 <project name="test"  xmlns:ivy="antlib:org.apache.ivy.ant">
   <target name="ivy-download" description="To download ivy" unless="offline">
-    <get src="http://repo2.maven.org/maven2/org/apache/ivy/ivy/2.2.0/ivy-2.2.0.jar" dest="ivy/ivy-2.2.0.jar" usetimestamp="true"/>
+    <get src="http://repo2.maven.org/maven2/org/apache/ivy/ivy/2.2.0/ivy-2.2.0.jar" dest="ivy-2.2.0.jar" usetimestamp="true"/>
   </target>
   <target name="ivy-init-antlib" depends="ivy-download" unless="ivy.found">
     <typedef uri="antlib:org.apache.ivy.ant" onerror="fail"
              loaderRef="ivyLoader">
       <classpath>
-        <pathelement location="ivy/ivy-2.2.0.jar"/>
+        <pathelement location="ivy-2.2.0.jar"/>
       </classpath>
     </typedef>
     <fail >
