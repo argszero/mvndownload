@@ -16,11 +16,6 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.sonatype.sisu.inject</groupId>
-      <artifactId>zookeeper</artifactId>
-      <version>3.4.5-cdh4.2.0</version>
-    </dependency>
-    <dependency>
       <groupId>org.apache.zookeeper</groupId>
       <artifactId>zookeeper</artifactId>
       <version>3.4.5-cdh4.2.0</version>
