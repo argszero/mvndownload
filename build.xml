@@ -1,5 +1,23 @@
 <project name="test"  xmlns:ivy="antlib:org.apache.ivy.ant">
-  <target name="ivy-init">
+  <target name="ivy-download" description="To download ivy" unless="offline">
+    <get src="http://repo2.maven.org/maven2/org/apache/ivy/ivy/2.2.0/ivy-2.2.0.jar" dest="ivy/ivy-2.2.0.jar" usetimestamp="true"/>
+  </target>
+  <target name="ivy-init-antlib" depends="ivy-download" unless="ivy.found">
+    <typedef uri="antlib:org.apache.ivy.ant" onerror="fail"
+             loaderRef="ivyLoader">
+      <classpath>
+        <pathelement location="ivy/ivy-2.2.0.jar"/>
+      </classpath>
+    </typedef>
+    <fail >
+      <condition >
+        <not>
+          <typefound uri="antlib:org.apache.ivy.ant" name="cleancache"/>
+        </not>
+      </condition>
+    </fail>
+  </target>
+  <target name="ivy-init" depends="ivy-init-antlib">
     <ivy:configure settingsid="ivy.xml" file="ivysettings.xml"/>
   </target>
   <target name="tt"  depends="ivy-init">
