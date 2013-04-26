@@ -1,0 +1,9 @@
+<project name="Hadoop" default="compile"
+         xmlns:artifact="urn:maven-artifact-ant"
+         xmlns:ivy="antlib:org.apache.ivy.ant">
+  <target name="tt">
+    <echo message="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+    <echo message="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+    <echo message="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+  </target>
+  </project>
