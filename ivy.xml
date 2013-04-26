@@ -1,10 +1,8 @@
 <ivy-module version="1.0" xmlns:m="http://ant.apache.org/ivy/maven">
-  <info>
-    <license name="Apache 2.0"/>
-    <ivyauthor name="Apache Hadoop Team" url="http://hadoop.apache.org"/>
-    <description>
-    </description>
-  </info>
+  <info organisation="test" module="test" />
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
   <dependencies>
     <dependency org="junit" name="junit" rev="3.8.1" conf="compile->default"/>
   </dependencies>
