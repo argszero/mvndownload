@@ -1,8 +1,8 @@
 <project name="test"  xmlns:ivy="antlib:org.apache.ivy.ant">
-  <target name="ivy-init" depends="ivy-init-antlib">
+  <target name="ivy-init">
     <ivy:configure settingsid="ivy.xml" file="ivysettings.xml"/>
   </target>
-  <target name="tt">
+  <target name="tt"  depends="ivy-init">
     <echo message="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
     <echo message="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
     <echo message="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
